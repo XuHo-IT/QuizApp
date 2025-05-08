@@ -1,19 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using QuizApp_UI.Models;
+using QuizApp_UI.Service;
 
 namespace QuizApp_UI.Controllers
 {
     public class QuizController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly IQuizService _quizService;
 
-        public QuizController(ILogger<HomeController> logger)
+        public QuizController(IQuizService quizService)
         {
-            _logger = logger;
+            _quizService = quizService;
         }
 
-        public IActionResult Quiz()
+        public async Task<IActionResult> Quiz()
         {
-            return View();
+            List<QuizApp_UI.Models.Quiz> list = new();
+            var response = await _quizService.GetAllQuizzes<APIResponse>();
+            if (response != null && response.IsSuccess && response.Result != null)
+            {
+                list = JsonConvert.DeserializeObject<List<QuizApp_UI.Models.Quiz>>(Convert.ToString(response.Result));
+            }
+            return View(list);
         }
     }
 

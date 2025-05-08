@@ -1,6 +1,7 @@
 ﻿namespace QuizApp_UI.Service
 {
-    public class IQuizService
+    public interface IQuizService
     {
+        Task<T> GetAllQuizzes<T>();
     }
 }

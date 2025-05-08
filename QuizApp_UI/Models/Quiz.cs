@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace QuizApp_API.Model
+namespace QuizApp_UI.Models
 {
     public class Quiz
     {

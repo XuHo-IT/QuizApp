@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_API\\QuizApp_API.csproj": {}
+    "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_API\\QuizApp_API.csproj": {}
   },
   "projects": {
-    "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_API\\QuizApp_API.csproj": {
+    "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_API\\QuizApp_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_API\\QuizApp_API.csproj",
+        "projectUniqueName": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_API\\QuizApp_API.csproj",
         "projectName": "QuizApp_API",
-        "projectPath": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_API\\QuizApp_API.csproj",
+        "projectPath": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_API\\QuizApp_API.csproj",
         "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_API\\obj\\",
+        "outputPath": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

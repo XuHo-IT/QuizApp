@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_UI\\QuizApp_UI.csproj",
+      "projectUniqueName": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_UI\\QuizApp_UI.csproj",
       "projectName": "QuizApp_UI",
-      "projectPath": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_UI\\QuizApp_UI.csproj",
+      "projectPath": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_UI\\QuizApp_UI.csproj",
       "packagesPath": "C:\\Users\\OS\\.nuget\\packages\\",
-      "outputPath": "D:\\CSharp_Projects\\QuizApp_API\\QuizApp_UI\\obj\\",
+      "outputPath": "D:\\CSharp_Projects\\QuizApp_Test\\QuizApp_UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

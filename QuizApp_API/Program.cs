@@ -1,11 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using QuizApp_API.Data;
+using QuizApp_API.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
-
+builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

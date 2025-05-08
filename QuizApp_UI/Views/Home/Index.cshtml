@@ -1,8 +1,14 @@
-﻿@{
+﻿<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyApp</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+@{
     ViewData["Title"] = "Home Page";
 }
-
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Let's take a quiz on my ASP.NET Core web app!</a>.</p>
+    <button class="start-btn" onclick="alert('Quiz starting!')">Start Quiz</button>
 </div>

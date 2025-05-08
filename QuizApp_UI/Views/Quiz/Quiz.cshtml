@@ -24,9 +24,11 @@
     <div class="report-container hidden" id="report-container">
         <h2>Quiz Report</h2>
         <p id="motivation-report"></p>
+        <img id="result-image" src="" alt="Result Image">
         <p id="score-report"></p>
         <ul id="time-report"></ul>
         <button class="replay-btn" onclick="restartQuiz()">Play Again</button>
+        <button class="replay-btn" onclick="window.location.href='@Url.Action("Index", "Home")'">Back Home</button>
     </div>
 
     <script>
@@ -51,11 +53,15 @@
             document.getElementById("number-question").textContent = `Quesion: ${currentQuestionIndex + 1}/${questions.length}`;
 
             const buttons = document.querySelectorAll(".answer-button");
+            const buttonsNext = document.querySelector("#next-btn");
+
             buttons.forEach((btn, i) => {
                 btn.textContent = q.answers[i] || "";
-                btn.style.backgroundColor = "#e0e0e0";
+                btn.style.backgroundColor = "#00000059";
+                btn.style.color = "#fff";
                 btn.disabled = false;
             });
+            buttonsNext.style.backgroundColor = "gray";
 
             startTime = new Date();
         }
@@ -69,13 +75,15 @@
             totalTime += parseFloat(timeTaken); 
 
             buttons.forEach((btn, i) => {
-                btn.style.backgroundColor = i === q.correct ? "#8bc34a" : (i === index ? "#f44336" : "#e0e0e0");
+                btn.style.backgroundColor = i === q.correct ? "#4CAF50" : (i === index ? "#f44336" : "#00000059");
+                btn.style.color = "#fff";
                 btn.disabled = true;
             });
 
             if (index === q.correct) correctCount++;
 
             document.getElementById("next-btn").disabled = false;
+            document.getElementById("next-btn").style.backgroundColor = "#4CAF50";
         }
 
         function nextQuestion() {
@@ -92,18 +100,23 @@
             document.getElementById("report-container").classList.remove("hidden");
 
             let scoreMessage = "";
-            if (correctCount < 3) {
+            let imageSrc = "";
+
+            if (correctCount < 2) {
                 scoreMessage = "You should try better next time!";
-            }else if (correctCount >= 3 && correctCount<=5) {
+                imageSrc = "/img/low_score.jpg";
+            } else if (correctCount >= 2 && correctCount <= 4) {
                 scoreMessage = "You almost got it!";
+                imageSrc = "/img/medium_score.jpg";
             } else if (correctCount === 5) {
                 scoreMessage = "Well played, boi!";
-            } else {
-                scoreMessage = `You answered ${correctCount} out of ${questions.length} correctly.`;
+                imageSrc = "/img/maximum_score.jpg";
             }
+
 
             document.getElementById("motivation-report").textContent = scoreMessage;
             document.getElementById("score-report").textContent = `You answered ${correctCount} out of ${questions.length} correctly.`;
+            document.getElementById("result-image").src = imageSrc;
 
             const totalTimeInSeconds = totalTime.toFixed(2);
 

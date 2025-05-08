@@ -2,22 +2,28 @@
     font-family: Arial, sans-serif;
     padding: 40px;
     background: #f4f4f4;
+    background-image: url('/img/background.gif');
+    background-size: cover;
+    background-position: center center;
 }
 
 .quiz-container {
-    background: #fff;
+    background-color:transparent;
     padding: 20px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height:610px;
+    height:510px;
+    color:#fff;
 }
 .report-container {
-    background: #fff;
+    background-color: transparent;
     padding: 20px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 530px;
+    color: #fff;
 }
 h2 {
     margin-bottom: 20px;
@@ -32,7 +38,8 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    height:100px;
+    height: 75px;
+
 }
 .answer-button:hover {
     background-color: #d5d5d5;
@@ -48,12 +55,8 @@ h2 {
  .hidden {
         display: none;
  }
-
-.answer-button {
-    margin: 5px;
-}
 #next-btn {
-    background-color: rgb(139, 195, 74);
+    background-color: #4CAF50;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -76,4 +79,10 @@ button.replay-btn {
     transition: background-color 0.3s ease;
     display: block;
     margin: 20px auto;
+}
+#result-image {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+    height: 250px;
 }
